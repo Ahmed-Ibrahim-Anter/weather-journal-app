@@ -1,0 +1,208 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background: #fffff8;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+#app {
+    display: grid;
+    grid-template-rows: 20% repeat(3, 10%) 1fr;
+    grid-template-columns: repeat(4, minmax(auto, 1fr));
+    background-image: -webkit-linear-gradient(blue, white);
+    color: #f0d43a;
+    justify-content: center;
+    height: 100vh;
+    grid-gap: 1em;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.headline {
+    grid-column: 1/5;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+}
+
+.zip {
+    grid-column: 1/4;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.feel {
+    grid-column: 1/4;
+    grid-row: 3/4;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.generate {
+    padding-right: 2vw;
+    grid-column: 4/5;
+    grid-row: 2/4;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* background-color: brown; */
+}
+
+.title {
+    grid-column: 1/5;
+    grid-row: 4/5;
+    background: rgba(59, 74, 107, .4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#entryHolder {
+    grid-column: 1/5;
+    grid-row: 5/6;
+    background: rgba(59, 74, 107, .4);
+    display: grid;
+    grid-template-rows: 30% 1fr;
+    grid-template-columns: repeat(4, minmax(auto, 1fr));
+}
+
+#name {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 2px solid aliceblue;
+}
+
+#date {
+    grid-column: 1/5;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid aliceblue;
+    font-size: medium;
+    -webkit-font-smoothing: auto;
+}
+
+#description {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    border-right: 2px solid aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+#temp {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 2px solid aliceblue;
+}
+
+#content {
+    grid-column: 4/5;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+#zip {
+    background: none;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    border-bottom: 2px solid rgb(130, 220, 255);
+    width: 90%;
+    color: white;
+    font-size: large;
+}
+
+#feelings {
+    background: none;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    border-bottom: 2px solid rgb(148, 137, 137);
+    width: 90%;
+    color: white;
+    font-size: large;
+    word-wrap: break-word;
+}
+
+textarea {
+    padding: 20px 10px 0px 10px;
+    line-height: 10px;
+    overflow: hidden;
+}
+
+input[type="text"] {
+    padding: 8px 8px;
+    line-height: 10px;
+}
+
+input:focus, select:focus, textarea:focus, button:focus {
+    outline: none;
+}
+
+/* Style for Placeholder Text*/
+
+::placeholder {
+    /* Firefox, Chrome, Opera */
+    color: #e4e2d8;
+    font-family: 'Oswald', sans-serif;
+    font-size: large;
+    word-wrap: break-word;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #f0d43a;
+    font-family: 'Oswald', sans-serif;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #f0d43a;
+    font-family: 'Oswald', sans-serif;
+}
+
+#generate {
+    display: inline-block;
+    padding: 2% 4%;
+    font-size: large;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: rgb(146, 130, 198);
+    border: none;
+    border-radius: 2em;
+    box-shadow: 0 1% rgb(96, 0, 255);
+}
+
+#generate:hover {
+    background-color: rgb(132, 0, 255)
+}
+
+#generate:active {
+    background-color: #a996d4;
+    box-shadow: 0 1% #666;
+    transform: translateY(4px);
+}
